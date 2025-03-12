@@ -1,0 +1,18 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">SaleApp_G5</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="address">Address</string>
+    <string name="login">Log In</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="existed">Already have an account? Sign In</string>
+    <string name="not_existed">Don\'t have an account? Sign Up</string>
+    <string name="change_language">Change</string>
+    <string name="register">Register</string>
+    <string name="login_title">Welcome Back !</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
