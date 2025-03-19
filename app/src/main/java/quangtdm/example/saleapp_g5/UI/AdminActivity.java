@@ -50,7 +50,6 @@ public class AdminActivity extends AppCompatActivity {
             getSupportActionBar().hide();
         }
 
-        tvHello = findViewById(R.id.tvAdminHello);
         bottomNav = findViewById(R.id.admin_bottom_nav);
     }
 
