@@ -2,7 +2,6 @@ package quangtdm.example.saleapp_g5.UI;
 
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.TextView;
 
 import androidx.activity.OnBackPressedCallback;

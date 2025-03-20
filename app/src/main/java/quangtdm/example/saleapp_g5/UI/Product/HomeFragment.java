@@ -10,11 +10,6 @@ import android.view.ViewGroup;
 
 import quangtdm.example.saleapp_g5.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link HomeFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class HomeFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
