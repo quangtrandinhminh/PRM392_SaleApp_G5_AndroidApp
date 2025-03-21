@@ -1,5 +1,7 @@
 package quangtdm.example.saleapp_g5.Network;
 
+import android.util.Log;
+
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -31,7 +33,11 @@ public class RetrofitClient {
 
                         // Add token to header if available
                         if (token != null && !token.isEmpty()) {
-                            requestBuilder.addHeader("Authorization", "Bearer " + token);
+                            String authHeader = "Bearer " + token;
+                            requestBuilder.addHeader("Authorization", authHeader);
+                            Log.d("Interceptor", "Adding header: " + authHeader);
+                        } else {
+                            Log.d("Interceptor", "No token available");
                         }
 
                         Request modifiedRequest = requestBuilder.build();

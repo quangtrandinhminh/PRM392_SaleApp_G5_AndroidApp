@@ -2,6 +2,7 @@ package quangtdm.example.saleapp_g5.UI;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 import androidx.activity.OnBackPressedCallback;
@@ -15,12 +16,12 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import quangtdm.example.saleapp_g5.R;
 import quangtdm.example.saleapp_g5.UI.Chat.ChatFragment;
 import quangtdm.example.saleapp_g5.UI.Noti.NotiFragment;
-import quangtdm.example.saleapp_g5.UI.Product.HomeFragment;
+import quangtdm.example.saleapp_g5.UI.Product.ProductFragment;
 import quangtdm.example.saleapp_g5.UI.User.MeFragment;
 import quangtdm.example.saleapp_g5.Utils.TokenManager;
 
 public class AdminActivity extends AppCompatActivity {
-    private TextView tvHello;
+    private TextView tvUsername;
     private BottomNavigationView bottomNav;
 
     @Override
@@ -39,6 +40,7 @@ public class AdminActivity extends AppCompatActivity {
         initView();
         initEvent();
         setupBackPressedCallback();
+        bottomNav.setSelectedItemId(R.id.navigation_admin_home);
     }
 
     private void initView() {
@@ -47,6 +49,7 @@ public class AdminActivity extends AppCompatActivity {
         }
 
         bottomNav = findViewById(R.id.admin_bottom_nav);
+        tvUsername = findViewById(R.id.tvUsername);
     }
 
     private void initEvent() {
@@ -58,7 +61,7 @@ public class AdminActivity extends AppCompatActivity {
         Fragment selectedFragment = null;
         switch (item.getItemId()) {
             case R.id.navigation_admin_home:
-                selectedFragment = new HomeFragment();
+                selectedFragment = new ProductFragment();
                 break;
             case R.id.navigation_admin_chat:
                 selectedFragment = new ChatFragment();
@@ -94,6 +97,6 @@ public class AdminActivity extends AppCompatActivity {
     private void showHello() {
         String username = TokenManager.getInstance(this).getUsername() != null
                 ? TokenManager.getInstance(this).getUsername() : "User";
-        tvHello.setText("Hello Admin " + username);
+        tvUsername.setText(username);
     }
 }

@@ -11,6 +11,11 @@
         android:title="Chat" />
 
     <item
+        android:id="@+id/navigation_admin_order"
+        android:icon="@drawable/baseline_assignment_24"
+        android:title="Order" />
+
+    <item
         android:id="@+id/navigation_admin_notifications"
         android:icon="@drawable/baseline_notifications_24"
         android:title="Notifications" />

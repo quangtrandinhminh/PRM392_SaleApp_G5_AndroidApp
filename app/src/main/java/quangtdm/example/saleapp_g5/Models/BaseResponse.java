@@ -5,7 +5,6 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.reflect.TypeToken;
 
 public class BaseResponse<T> {
-
     @SerializedName("data")
     private T data;
 

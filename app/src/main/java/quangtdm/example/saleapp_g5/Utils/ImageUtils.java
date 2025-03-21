@@ -1,24 +1,16 @@
 package quangtdm.example.saleapp_g5.Utils;
 
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.widget.ImageView;
-
-import java.io.IOException;
-import java.net.URL;
+import com.bumptech.glide.Glide;
+import quangtdm.example.saleapp_g5.R;
 
 public class ImageUtils {
-    public static boolean loadImageFromUrl(String imageUrl, ImageView imageView) {
-        try {
-            URL url = new URL(imageUrl);
-            final Bitmap bmp = BitmapFactory.decodeStream(url.openConnection().getInputStream());
-
-            // Update the UI thread using the ImageView's context
-            imageView.setImageBitmap(bmp);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return true;
+    public static void loadImage(String imageUrl, ImageView imageView) {
+        Glide.with(imageView.getContext())
+                .load(imageUrl)
+                .placeholder(R.drawable.ic_launcher_background)  // Default placeholder image
+                .error(R.drawable.ic_launcher_background)        // Image if error occurs
+                .into(imageView);
     }
 }
+

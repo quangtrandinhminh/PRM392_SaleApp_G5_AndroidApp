@@ -4,30 +4,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".UI.Product.HomeFragment"
+    tools:context=".UI.Product.ProductFragment"
     android:padding="@dimen/spacing_small"
     android:background="@color/primary"
     >
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/search"
+        android:id="@+id/edtSearch"
         style="@style/modifiedEditText"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginEnd="10dp"
         android:hint="Search"
         android:drawableStart="@drawable/baseline_search_24"
         android:drawablePadding="@dimen/spacing_small"
         android:background="@color/white"
         android:padding="@dimen/spacing_small"
-        android:layout_marginBottom="@dimen/spacing_small"
         android:inputType="text"
-        app:layout_constraintEnd_toStartOf="@+id/btnCart"
+        app:layout_constraintEnd_toStartOf="@+id/ivCart"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@id/ivCart"
+        app:layout_constraintBottom_toBottomOf="@id/ivCart"
+        />
 
     <ImageView
-        android:id="@+id/btnCart"
+        android:id="@+id/ivCart"
         android:layout_width="45dp"
         android:layout_height="45dp"
         android:background="@color/white"
@@ -35,6 +36,21 @@
         android:layout_marginBottom="@dimen/spacing_small"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvProducts"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:listitem="@layout/item_product"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2"
+        android:layout_marginTop="@dimen/spacing_small"
+        app:layout_constraintTop_toBottomOf="@+id/edtSearch"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.2"
         />
 
 

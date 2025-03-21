@@ -27,7 +27,6 @@ public class AuthRepository {
     }
 
     public void login(LoginRequest loginRequest, final AuthCallback callback) {
-        authService.login(loginRequest);
         Call<BaseResponse> call = authService.login(loginRequest);
 
         call.enqueue(new Callback<BaseResponse>() {

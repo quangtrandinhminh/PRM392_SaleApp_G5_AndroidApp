@@ -16,7 +16,7 @@ import quangtdm.example.saleapp_g5.R;
 import quangtdm.example.saleapp_g5.UI.User.MeFragment;
 import quangtdm.example.saleapp_g5.UI.Chat.ChatFragment;
 import quangtdm.example.saleapp_g5.UI.Noti.NotiFragment;
-import quangtdm.example.saleapp_g5.UI.Product.HomeFragment;
+import quangtdm.example.saleapp_g5.UI.Product.ProductFragment;
 import quangtdm.example.saleapp_g5.Utils.TokenManager;
 
 public class MainActivity extends AppCompatActivity {
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         Fragment selectedFragment = null;
         switch (item.getItemId()) {
             case R.id.navigation_home:
-                selectedFragment = new HomeFragment();
+                selectedFragment = new ProductFragment();
                 break;
             case R.id.navigation_chat:
                 selectedFragment = new ChatFragment();

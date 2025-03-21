@@ -10,13 +10,13 @@ import androidx.core.view.WindowInsetsCompat;
 
 import quangtdm.example.saleapp_g5.R;
 
-public class ProductActivity extends AppCompatActivity {
+public class ProductDetailsAdminActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_product);
+        setContentView(R.layout.activity_product_details_admin);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);

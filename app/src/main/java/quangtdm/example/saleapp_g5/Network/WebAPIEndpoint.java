@@ -25,7 +25,7 @@ public class WebAPIEndpoint {
     {
         private static final String BASE_URL = BASE_API + "/product";
         public static final String GetProducts = BASE_URL;
-        public static final String GetProduct = BASE_URL + "/{id}";
+        public static final String GetProductById = BASE_URL + "/{id}";
         public static final String CreateProduct = BASE_URL;
         public static final String UpdateProduct = BASE_URL;
         public static final String DeleteProduct = BASE_URL + "/{id}";

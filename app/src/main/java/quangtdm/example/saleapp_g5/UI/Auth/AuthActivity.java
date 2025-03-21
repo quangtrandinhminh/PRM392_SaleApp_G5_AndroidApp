@@ -14,6 +14,7 @@ import androidx.core.view.WindowCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.Fragment;
 
+import quangtdm.example.saleapp_g5.Network.RetrofitClient;
 import quangtdm.example.saleapp_g5.R;
 import quangtdm.example.saleapp_g5.UI.AdminActivity;
 import quangtdm.example.saleapp_g5.UI.MainActivity;
@@ -94,6 +95,7 @@ public class AuthActivity extends AppCompatActivity {
             return;
 
         String role = TokenManager.getInstance(this).getRole();
+        RetrofitClient.setToken(TokenManager.getInstance(this).getAccessToken());
         if (role != null && role.equals("Admin")) {
             startActivity(new Intent(this, AdminActivity.class));
         } else {
